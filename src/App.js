@@ -1,8 +1,8 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom"; // Import Navigate
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom"; 
 import CountTimer from "./components/CountTimer";
 import SearchUser from "./components/SearchUser";
-import Navbar from "./components/Navbar"; // Import Navbar component
+import Navbar from "./components/Navbar";
 
 function App() {
     return (
