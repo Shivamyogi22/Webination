@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import CountTimer from "./components/CountTimer";
+import SearchUser from "./components/SearchUser";
+import Navbar from "./components/Navbar"; // Import Navbar component
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <div className="App">
+                <Navbar />
+                <Routes>
+                    <Route path="/count-timer" element={<CountTimer />} />
+                    <Route path="/search-user" element={<SearchUser />} />
+                </Routes>
+            </div>
+        </Router>
+    );
 }
 
 export default App;
